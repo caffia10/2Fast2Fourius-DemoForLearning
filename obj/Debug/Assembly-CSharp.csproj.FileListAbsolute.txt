@@ -157,7 +157,6 @@ C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.ProfilerModul
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.dll
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SharedInternalsModule.dll
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
-C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SpriteMaskModule.dll
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SpriteShapeModule.dll
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.StreamingModule.dll
@@ -237,7 +236,6 @@ C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.Physics2DModu
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.ProfilerModule.xml
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.xml
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SharedInternalsModule.xml
-C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SpriteMaskModule.xml
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.SpriteShapeModule.xml
 C:\Franco\Proyectos\Unity\2Fast2Furious\Temp\bin\Debug\UnityEngine.StreamingModule.xml

@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Assets.Source.DesignPattern;
+using UnityEngine;
 
-public class CarController : MonoBehaviour
+public class CarController : SingletonMonoBehaviour<CarController>
 {
     private GameObject carGo;
 
@@ -9,7 +10,7 @@ public class CarController : MonoBehaviour
 
     void Start()
     {
-        carGo = this.GetGameObjectByType<Car>();
+        carGo = Car.Instance.gameObject;
     }
 
     void FixedUpdate()

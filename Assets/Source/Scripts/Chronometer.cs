@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Source.DesignPattern;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Chronometer : MonoBehaviour
+public class Chronometer : SingletonMonoBehaviour<Chronometer>
 {
     private float distance;
     private RouteEngine routeEngineComp;
@@ -33,7 +32,7 @@ public class Chronometer : MonoBehaviour
 
     void Start()
     {
-        routeEngineComp = this.GetComponentFromUniqueInstance<RouteEngine>();
+        routeEngineComp = RouteEngine.Instance;
 
         TimeText.text = "2:00";
         DistanceText.text = "0";

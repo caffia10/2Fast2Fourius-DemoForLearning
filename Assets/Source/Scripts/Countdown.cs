@@ -9,7 +9,7 @@ public class Countdown : MonoBehaviour
     public SpriteRenderer SpriteRendererComp;
 
     public GameObject CarControllerGo;
-    public GameObject CarGo;
+    private GameObject carGo;
 
     public GameObject CountNumbersGO;
 
@@ -20,14 +20,13 @@ public class Countdown : MonoBehaviour
 
     private void InitializeComponents()
     {
-        RouteEngineComp = this.GetComponentFromUniqueInstance<RouteEngine>();
+        RouteEngineComp = RouteEngine.Instance;
 
-        CountNumbersGO = GameObject.Find("CountNumbers");
         SpriteRendererComp = CountNumbersGO.GetComponent<SpriteRenderer>();
 
-        CarControllerGo = this.GetGameObjectByType<CarController>(); 
+        CarControllerGo = CarController.Instance.gameObject; 
 
-        CarGo = this.GetGameObjectByType<Car>();
+        carGo = Car.Instance.gameObject;
 
         Init();
     }
@@ -39,21 +38,23 @@ public class Countdown : MonoBehaviour
 
     private IEnumerator Count()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+
         CarControllerGo.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(2);
 
         SpriteRendererComp.sprite = numbers[1];
-        gameObject.GetComponent<AudioSource>().Play();
+        audioSource.Play();
         yield return new WaitForSeconds(1);
 
         SpriteRendererComp.sprite = numbers[2];
-        gameObject.GetComponent<AudioSource>().Play();
+        audioSource.Play();
         yield return new WaitForSeconds(1);
 
         SpriteRendererComp.sprite = numbers[3];
         RouteEngineComp.StartGame = true;
         CountNumbersGO.GetComponent<AudioSource>().Play();
-        CarGo.GetComponent<AudioSource>().Play();
+        carGo.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(2);
 
         CountNumbersGO.SetActive(false);

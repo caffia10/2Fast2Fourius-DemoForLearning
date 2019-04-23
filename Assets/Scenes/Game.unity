@@ -1756,8 +1756,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e34facc0d271f84bb5e98e98358f9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ContainerGO: {fileID: 1617463974}
   Speed: 0
   StartGame: 0
+  Camera: {fileID: 519420031}
+  BgFinal: {fileID: 1516390509}
 --- !u!1 &843180651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,8 +2029,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 0f8ec2532d20d4c2698fdbda24a50a8f, type: 3}
   SpriteRendererComp: {fileID: 0}
   CarControllerGo: {fileID: 0}
-  CarGo: {fileID: 0}
-  CountNumbersGO: {fileID: 0}
+  CountNumbersGO: {fileID: 319897248}
 --- !u!1 &1059442946
 GameObject:
   m_ObjectHideFlags: 0

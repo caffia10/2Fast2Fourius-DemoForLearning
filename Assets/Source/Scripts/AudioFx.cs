@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Assets.Source.DesignPattern;
+using UnityEngine;
 
-public class AudioFx : MonoBehaviour
+public class AudioFx : SingletonMonoBehaviour<AudioFx>
 {
     public AudioClip[] Fxs;
     private AudioSource audioSourceComp;

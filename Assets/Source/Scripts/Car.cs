@@ -1,3 +1,4 @@
-﻿using UnityEngine;
+﻿using Assets.Source.DesignPattern;
+using UnityEngine;
 
-public class Car : MonoBehaviour{}
+public class Car : SingletonMonoBehaviour<Car>{}

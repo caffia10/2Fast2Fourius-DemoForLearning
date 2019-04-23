@@ -7,9 +7,9 @@ public class Bus : MonoBehaviour
 
     private void Start()
     {
-        chronometerComp = this.GetComponentFromUniqueInstance<Chronometer>();
+        chronometerComp = Chronometer.Instance;
 
-        audioFXComp = this.GetComponentFromUniqueInstance<AudioFx>();
+        audioFXComp = AudioFx.Instance;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Source\DesignPattern\SingletonMonoBehaviour.cs" />
     <Compile Include="Assets\Source\Scripts\AudioFx.cs" />
     <Compile Include="Assets\Source\Scripts\Bus.cs" />
     <Compile Include="Assets\Source\Scripts\Car.cs" />
@@ -69,7 +70,6 @@
     <Compile Include="Assets\Source\Scripts\Moltens.cs" />
     <Compile Include="Assets\Source\Scripts\Road.cs" />
     <Compile Include="Assets\Source\Scripts\RouteEngine.cs" />
-    <Compile Include="Assets\Source\Service\ExtensionMethods.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Franco/Proyectos/Unity/2Fast2Furious/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

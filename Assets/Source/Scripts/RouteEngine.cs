@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Assets.Source.DesignPattern;
+using UnityEngine;
 
-public class RouteEngine : MonoBehaviour
+public class RouteEngine : SingletonMonoBehaviour<RouteEngine>
 {
-    private GameObject containerGO;
+    public GameObject ContainerGO;
     private GameObject[] routesGO;
 
     public float Speed;
@@ -23,12 +24,12 @@ public class RouteEngine : MonoBehaviour
 
     private bool OutScreen;
 
-    private Camera cameraComp;
+    public Camera Camera;
 
     private GameObject carGo;
     private GameObject audioFxGo;
     private AudioFx audioFxComp;
-    private GameObject bgFinal;
+    public GameObject BgFinal;
 
     void Start()
     {
@@ -37,15 +38,10 @@ public class RouteEngine : MonoBehaviour
 
     private void BeginPlay()
     {
-        containerGO = GameObject.Find("RouteContainer");
+        BgFinal.SetActive(false);
 
-        cameraComp = this.GetComponentFromUniqueInstance<Camera>();
-
-        bgFinal = GameObject.Find("PanelGameOver");
-        bgFinal.SetActive(false);
-
-        audioFxComp = this.GetComponentFromUniqueInstance<AudioFx>();
-        carGo = this.GetGameObjectByType<Car>();
+        audioFxComp = AudioFx.Instance;
+        carGo = Car.Instance.gameObject;
 
         SpeedRouteEngine();
         MeasureScreen();
@@ -62,7 +58,7 @@ public class RouteEngine : MonoBehaviour
         routesGO = GameObject.FindGameObjectsWithTag("RouteTag");
         for (int i = 0; i < routesGO.Length; i++)
         {
-            routesGO[i].gameObject.transform.parent = containerGO.transform;
+            routesGO[i].gameObject.transform.parent = ContainerGO.transform;
             routesGO[i].gameObject.SetActive(false);
             routesGO[i].gameObject.name = "RouteOff_" + i;
         }
@@ -109,7 +105,7 @@ public class RouteEngine : MonoBehaviour
 
     private void MeasureScreen()
     {
-        limitScreen = new Vector3(0, cameraComp.ScreenToWorldPoint(new Vector3(0,0,0)).y - 0.5f, 0);
+        limitScreen = new Vector3(0, Camera.ScreenToWorldPoint(new Vector3(0,0,0)).y - 0.5f, 0);
     }
 
     void Update()
@@ -139,6 +135,6 @@ public class RouteEngine : MonoBehaviour
         gameOver = true;
         carGo.GetComponent<AudioSource>().Stop();
         audioFxComp.FXSoundGameOver();
-        bgFinal.SetActive(true);
+        BgFinal.SetActive(true);
     }
 }
